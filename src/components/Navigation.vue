@@ -1,5 +1,16 @@
 <template>
   <div class="nav">
+    <div class="nav__logo">
+      <img class="nav__logo--image" src="static/icons/logo-white.svg">
+    </div>
+    <div class="nav__user">
+      <p class="nav__user--greeting">
+        Hello, {{ user.name }}
+      </p>
+      <p class="nav__user--company">
+        {{ user.company }}
+      </p>
+    </div>
     <ul class=nav>
       <li class="nav__li" v-for="item in navItems">
         <a class="nav__link" v-bind:class="{ active: item.isActive }" href="">
@@ -16,7 +27,10 @@ export default {
   name: 'hello',
   data () {
     return {
-      active: 'Dashboard',
+      user: {
+        name: 'Somchai',
+        company: 'Twin Types Corporation'
+      },
       navItems: [
         {
           name: 'Dashboard',
@@ -76,6 +90,52 @@ export default {
   font-weight: 600;
   line-height: 34px;
   width: 246px;
+  margin: 0;
+}
+
+.nav__logo {
+  height: 70px;
+  width: 246px;
+  background-color: #4C1367;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__logo--image {
+  height: 50px;
+  width: 158px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__user {
+  box-sizing: border-box;
+  height: 45px;
+  width: 247px;
+  background-color: #FFFFFF;
+  text-align: left;
+  padding-left: 21px;
+}
+
+.nav__user--greeting {
+  color: #DF542A;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.nav__user--company {
+  color: #626272;
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  margin: 0;
+  padding-top: 3px;
+  text-transform: uppercase;
 }
 
 .nav__link {
@@ -121,6 +181,7 @@ export default {
   background-color: #FFCC00;
   z-index: 100;
 }
+
 
 ul {
   list-style-type: none;
