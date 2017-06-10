@@ -2,8 +2,10 @@
   <div class="nav">
     <ul class=nav>
       <li class="nav__li" v-for="item in navItems">
-        <img class="nav__icon" :src="item.icon">
-        <span class="nav__text">{{ item.name }}</span>
+        <a class="nav__link" v-bind:class="{ active: item.isActive }" href="">
+          <img class="nav__icon" :src="item.icon">
+          <span class="nav__text">{{ item.name }}</span>
+        </a>
       </li>
     </ul>
   </div>
@@ -14,46 +16,48 @@ export default {
   name: 'hello',
   data () {
     return {
+      active: 'Dashboard',
       navItems: [
         {
           name: 'Dashboard',
-          icon: './static/icons/controls-white.svg'
+          icon: './static/icons/controls-white.svg',
+          isActive: true
         },
         {
           name: 'Orders',
-          icon: './static/icons/shopping-cart-white.svg'
+          icon: './static/icons/shopping-cart-purple.svg'
         },
         {
           name: 'Companies',
-          icon: './static/icons/factory-white.svg'
+          icon: './static/icons/factory-purple.svg'
         },
         {
           name: 'Products',
-          icon: './static/icons/box-white.svg'
+          icon: './static/icons/box-purple.svg'
         },
         {
           name: 'Documents',
-          icon: './static/icons/document-white.svg'
+          icon: './static/icons/document-purple.svg'
         },
         {
           name: 'Pricing',
-          icon: './static/icons/pricing-label-white.svg'
+          icon: './static/icons/pricing-label-purple.svg'
         },
         {
           name: 'Brands',
-          icon: './static/icons/shapes-white.svg'
+          icon: './static/icons/shapes-purple.svg'
         },
         {
           name: 'Settings',
-          icon: './static/icons/gear-white.svg'
+          icon: './static/icons/gear-purple.svg'
         },
         {
           name: 'Reports',
-          icon: './static/icons/chart-white.svg'
+          icon: './static/icons/chart-purple.svg'
         },
         {
           name: 'Account Users',
-          icon: './static/icons/people-white.svg'
+          icon: './static/icons/people-purple.svg'
         }
       ]
     }
@@ -62,7 +66,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style style="scss" scoped>
+<style style="sass" scoped>
 .nav {
   background-color: #702283;
   box-shadow: 8px 0 8px 0 rgba(0, 0, 0, 0.21);
@@ -74,9 +78,22 @@ export default {
   width: 246px;
 }
 
-.nav__li {
+.nav__link {
+  width: 100%;
+  height: 100%;
+  /*height: 67px;
+  width: 246px;*/
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: #D18EE2;
+}
+
+.nav__link:hover {
+    background: rgba(76,19,103,0.5);
+}
+
+.nav__li {
 }
 
 .nav__icon {
@@ -87,6 +104,11 @@ export default {
 
 .nav__text {
   margin-left: 26px;
+}
+
+.active {
+  background: rgba(76,19,103,0.5);
+  color: #FFFFFF;
 }
 
 ul {
