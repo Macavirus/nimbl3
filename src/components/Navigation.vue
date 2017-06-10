@@ -107,9 +107,11 @@ export default {
   background: rgba(76, 19, 103, 0.5);
   color: #FFFFFF;
   box-shadow: 0 -1px 0 0 #4C1367, 0 1px 0 0 #4C1367;
+  position: relative;
 }
 
 .active::before {
+  position: absolute;
   content: '';
   height: 41px;
   width: 6px;
