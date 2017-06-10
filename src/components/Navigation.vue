@@ -81,8 +81,6 @@ export default {
 .nav__link {
   width: 100%;
   height: 100%;
-  /*height: 67px;
-  width: 246px;*/
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -90,11 +88,10 @@ export default {
 }
 
 .nav__link:hover {
-    background: rgba(76,19,103,0.5);
+  background: rgba(76, 19, 103, 0.5);
 }
 
-.nav__li {
-}
+.nav__li {}
 
 .nav__icon {
   margin-left: 30px;
@@ -107,8 +104,18 @@ export default {
 }
 
 .active {
-  background: rgba(76,19,103,0.5);
+  background: rgba(76, 19, 103, 0.5);
   color: #FFFFFF;
+  box-shadow: 0 -1px 0 0 #4C1367, 0 1px 0 0 #4C1367;
+}
+
+.active::before {
+  content: '';
+  height: 41px;
+  width: 6px;
+  border-radius: 0 17px 17px 0;
+  background-color: #FFCC00;
+  z-index: 100;
 }
 
 ul {
