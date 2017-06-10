@@ -112,6 +112,8 @@ export default {
 
 .active::before {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   content: '';
   height: 41px;
   width: 6px;
