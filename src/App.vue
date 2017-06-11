@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <navigation></navigation>
+    <div class="main">
     <orderspec></orderspec>
+    </div>
   </div>
 </template>
 
@@ -32,6 +34,7 @@ body {
   margin: 0;
   line-height: 1;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  background: #F4F7F8;
 }
 * {
   box-sizing: border-box;
@@ -61,5 +64,9 @@ button {
   text-align: center;
   color: #2c3e50;
   display: flex;
+}
+.main {
+  margin-left: 34px;
+  margin-top: 50px;
 }
 </style>

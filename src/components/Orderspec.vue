@@ -1,6 +1,6 @@
 <template>
   <div class="orderspec">
-    <div class="orderspec__order"> test
+    <div class="orderspec__order">
     </div>
       <button class="orderspec__back">
         Back
@@ -27,7 +27,7 @@ export default {
 .orderspec {
   display: flex;
   align-items: center;
-  padding-left: 34px;
+  width: 100%;
 }
 
 .orderspec__order {
@@ -38,6 +38,11 @@ export default {
 	background-color: #FFFFFF;
 }
 
+.orderspec__back {
+  	height: 18px;	width: 36px;	color: #626272;	font-family: Montserrat;	font-size: 14px;	line-height: 19px;
+    margin-left: 54px;
+    margin-right: 35px;
+}
 .orderspec__update {
   	height: 44px;	width: 140px;	border-radius: 5px;	background-color: #8899AA;
     	color: #FBFBFB;	font-family: Montserrat;	font-size: 14px;	line-height: 19px;
