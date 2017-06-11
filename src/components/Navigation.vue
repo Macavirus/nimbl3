@@ -85,7 +85,7 @@ export default {
   background-color: #702283;
   box-shadow: 8px 0 8px 0 rgba(0, 0, 0, 0.21);
   color: #FFFFFF;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 34px;
@@ -120,7 +120,7 @@ export default {
 
 .nav__user--greeting {
   color: #DF542A;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -129,7 +129,7 @@ export default {
 
 .nav__user--company {
   color: #626272;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 600;
   line-height: 14px;

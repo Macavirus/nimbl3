@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: local('Montserrat-Regular'),
+		url('assets/fonts/subset-Montserrat-Regular.woff2') format('woff2'),
+		url('assets/fonts/subset-Montserrat-Regular.woff') format('woff'),
+		url('assets/fonts/subset-Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: local('Montserrat-Bold'),
+		url('assets/fonts/subset-Montserrat-Bold.woff2') format('woff2'),
+		url('assets/fonts/subset-Montserrat-Bold.woff') format('woff'),
+		url('assets/fonts/subset-Montserrat-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: local('Montserrat Light'), local('Montserrat-Light'),
+		url('assets/fonts/subset-Montserrat-Light.woff2') format('woff2'),
+		url('assets/fonts/subset-Montserrat-Light.woff') format('woff'),
+		url('assets/fonts/subset-Montserrat-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat Semi';
+	src: local('Montserrat Semi Bold'), local('Montserrat-SemiBold'),
+		url('assets/fonts/subset-Montserrat-SemiBold.woff2') format('woff2'),
+		url('assets/fonts/subset-Montserrat-SemiBold.woff') format('woff'),
+		url('assets/fonts/subset-Montserrat-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
