@@ -69,7 +69,8 @@ button {
   display: flex;
 }
 .main {
-  margin-left: 34px;
-  margin-top: 50px;
+  padding-left: 34px;
+  padding-top: 50px;
+  width: 100%;
 }
 </style>
