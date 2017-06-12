@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <navigation></navigation>
+    <div class="nav__wrap">
+      <navigation></navigation>
+    </div>
     <div class="main">
       <orderspec></orderspec>
       <addproduct></addproduct>

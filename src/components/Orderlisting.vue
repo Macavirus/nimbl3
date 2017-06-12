@@ -107,7 +107,6 @@ export default {
   border-radius: 4px;
   background-color: #FFFFFF;
   margin-top: 17px;
-  margin-right: 17px;
 }
 
 .orderlisting__table {
@@ -120,6 +119,10 @@ export default {
 .orderlisting__thead--row {
   height: 50px;
   text-transform: uppercase;
+}
+
+.orderlisting__tbody {
+  overflow-x: auto;
 }
 
 .orderlisting__tbody--row {
