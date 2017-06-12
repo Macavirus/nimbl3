@@ -1,0 +1,14 @@
+$breakpoints: (
+  // mobile first using min-width -- don't need phone breakpoint.
+  tab: 769px,
+  desk : 1024px
+);
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}

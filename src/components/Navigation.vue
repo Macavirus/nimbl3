@@ -152,8 +152,6 @@ export default {
   background: rgba(76, 19, 103, 0.5);
 }
 
-.nav__li {}
-
 .nav__icon {
   margin-left: 30px;
   width: 17px;

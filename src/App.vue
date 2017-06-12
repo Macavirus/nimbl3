@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <navigation></navigation>
+    <div class="nav__wrap">
+      <navigation></navigation>
+    </div>
     <div class="main">
       <orderspec></orderspec>
       <addproduct></addproduct>
@@ -30,6 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import 'assets/breakpoints';
 @import 'assets/base';
 @import 'assets/fonts';
 </style>

@@ -22,6 +22,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import '../assets/breakpoints';
 .remarks {
   text-align: left;
 }
@@ -43,6 +44,5 @@ export default {
   font-size: 11px;
   line-height: 17px;
   padding: 15px 19px 17px;
-  margin-right: 17px;
 }
 </style>

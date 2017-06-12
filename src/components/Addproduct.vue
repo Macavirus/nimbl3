@@ -35,7 +35,6 @@ export default {
 <style lang="scss" scoped>
 .addproduct {
   margin-top: 17px;
-  margin-right: 17px;
 }
 
 .addproduct__wrapper {

@@ -84,35 +84,67 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import '../assets/breakpoints';
 .orderspec {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
+  @include mq(tab) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .orderspec__order {
-  height: 80px;
-  width: 822px;
+  min-height: 80px;
+  height: 100%;
+  padding-bottom: 10px;
   border: 1px solid rgba(173, 179, 185, 0.51);
   border-radius: 3px;
-  background-color: #FFFFFF;
+  background-color: #F4F7F8;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
+  @include mq(tab) {
+    padding-top: 10px;
+    background-color: #FFFFFF;
+  }
+  @include mq(desk) {
+    margin-right: 17px;
+  }
 }
 
 .orderspec__contact {
-  margin-left: 15px;
-  text-align: left;
+  text-align: center;
+  width: 100%;
+  padding: 16px 0 13px;
+  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.11), 0 2px 3px 0 rgba(98, 98, 114, 0.21);
+  background-color: #FFFFFF;
+
+  @include mq(tab) {
+    margin-left: 15px;
+    text-align: left;
+    width: auto;
+    box-shadow: none;
+  }
 }
 
 .orderspec__contact--name {
   margin: 0;
   color: #626272;
   font-family: Montserrat;
-  font-size: 16px;
   font-weight: bold;
-  line-height: 21px;
+
+  font-size: 24px;
+  line-height: 29px;
+  @include mq(tab) {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .orderspec__contact--address {
@@ -129,6 +161,11 @@ export default {
   font-weight: 600;
   line-height: 15px;
   padding-top: 5px;
+  display: none;
+
+  @include mq(tab) {
+    display: inherit;
+  }
 }
 
 .orderspec__back {
@@ -140,6 +177,11 @@ export default {
   line-height: 19px;
   margin-left: 25px;
   margin-right: 25px;
+  display: none;
+
+  @include mq(tab) {
+    display: inherit;
+  }
 }
 
 .orderspec__update {
@@ -151,6 +193,7 @@ export default {
   font-family: Montserrat;
   font-size: 14px;
   line-height: 19px;
+  margin: 10px 0;
 
   &:hover {
     background: #626272;
@@ -160,55 +203,76 @@ export default {
 .orderspec__type {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   position: relative;
   padding: 0;
+  width: 100%;
+  margin: 0 15px;
 
-  &::after {
-    content: '';
-    box-sizing: border-box;
-    height: 34px;
-    width: 2px;
-    border: 1px solid #ADB3B9;
-    opacity: 0.2;
-
-    position: absolute;
-    right: -28px;
-    top: 50%;
-    transform: translateY(-50%);
+  @include mq(tab) {
+    width: 100%;
+    align-items: center;
   }
 
-  &:last-of-type {
-    margin-right: 19.5px;
-  }
 
-  &:last-of-type::after {
-    height: 0;
-    width: 0;
-    border: 0;
+  @include mq(desk) {
+
+    width: auto;
+    min-width: 111px;
+
+    &::after {
+      content: '';
+      box-sizing: border-box;
+      height: 34px;
+      width: 2px;
+      border: 1px solid #ADB3B9;
+      opacity: 0.2;
+
+      position: absolute;
+      right: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-of-type {
+      margin-right: 19.5px;
+    }
+
+    &:last-of-type::after {
+      height: 0;
+      width: 0;
+      border: 0;
+    }
   }
 }
 
 .orderspec__label {
   height: 15px;
-  width: 59.16px;
   color: #626272;
   font-family: Montserrat;
-  font-size: 11px;
-  font-weight: bold;
-  line-height: 15px;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 3px;
+  margin: 15px 0 9px;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+  font-weight: initial;
+
+  @include mq(tab) {
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
 }
 
 .orderspec__selector {
   box-sizing: border-box;
   height: 33px;
-  width: 111.15px;
   border: 1px solid #C9C9C9;
   border-radius: 4px;
   background-color: #FFFFFF;
+  width: 100%;
 }
 
 select {
