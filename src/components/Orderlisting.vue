@@ -119,6 +119,7 @@ table {
 
 thead tr {
   height: 50px;
+  text-transform: uppercase;
 }
 
 tbody tr {
