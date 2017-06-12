@@ -10,8 +10,8 @@
 
 + TODO Add *"Logout"* to nav.
 
-+ TODO Fix box-shadow issue in upper nav.
++ DONE Fix box-shadow issue in upper nav.
 
 + TODO Fix active-nav:after icon appearing above modal when click on "Add Product".
 
-+ Add media queries and remove fixed-width CSS properties.
++ TODO Add media queries and remove fixed-width CSS properties.
