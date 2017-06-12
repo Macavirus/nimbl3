@@ -14,7 +14,7 @@
       <tbody>
         <tr v-for="entry in gridData">
           <td v-for="key in columns">
-            {{entry[key]}}
+            {{ entry[key] | isValueSet }}
           </td>
           <td>
             <a href="" @click.prevent="removeItem">Remove Item</a>
@@ -66,11 +66,11 @@ export default {
           sku: 'TN SO 000015',
           description: 'Magnetic contactor -9A (5.5 kW, 7.5 HCP), control voltage 230 Vac',
           brand: 'Schneider Electric',
-          'list price': 'THB 880',
+          'list price': '',
           discount: '30%',
-          'net price': 'THB 660',
+          'net price': '',
           qty: '16',
-          total: 'THB 50,079,8823'
+          total: ''
         },
         {
           sku: 'TN SO 000015',
@@ -89,7 +89,13 @@ export default {
     removeItem: function () {
       console.log('Item removed')
     }
-  }
+  },
+  filters: {
+    isValueSet: function (value) {
+      if (!value) return 'Set Price'
+      return value
+    }
+  },
 }
 
 </script>
@@ -108,35 +114,50 @@ table {
   width: 100%;
   height: 100%;
   text-align: left;
-    border-spacing: 0;
+  border-spacing: 0;
 }
+
 thead tr {
   height: 50px;
 }
+
 tbody tr {
   height: 64px;
-  	box-shadow: 0 -1px 0 0 rgba(#C9C9C9, 0.4);
+  box-shadow: 0 -1px 0 0 rgba(#C9C9C9, 0.4);
 }
-th{
-  	color: #626272;	font-family: Montserrat;	font-size: 8px;	font-weight: bold;	line-height: 11px;
-padding-left: 15px;
-}
-th tr {
-}
-td {
-  	color: #8899AA;	font-family: Montserrat;	font-size: 11px;	line-height: 15px;
-padding-left: 15px;
 
-&:last-of-type {
-  padding-right: 15px;
+th {
+  color: #626272;
+  font-family: Montserrat;
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 11px;
+  padding-left: 15px;
 }
+
+th tr {}
+
+td {
+  color: #8899AA;
+  font-family: Montserrat;
+  font-size: 11px;
+  line-height: 15px;
+  padding-left: 15px;
+
+  &:last-of-type {
+    padding-right: 15px;
+  }
 }
+
 tbody tr:nth-child(even) {
-   	background-color: rgba(#F8F8F8, 0.4);
+  background-color: rgba(#F8F8F8, 0.4);
 }
 
 td a {
   text-decoration: underline;
-  	color: #626272;	font-family: Montserrat;	font-size: 10px;	line-height: 13px;
+  color: #626272;
+  font-family: Montserrat;
+  font-size: 10px;
+  line-height: 13px;
 }
 </style>
