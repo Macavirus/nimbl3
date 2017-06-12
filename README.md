@@ -4,6 +4,8 @@
 
 This is the Technical Test for Nimbl3's Senior Frontend Dev position.
 
+![Nimble Demo](screenshot.png?raw=true "Demo")
+
 ## Build Setup
 
 ``` bash
