@@ -1,9 +1,9 @@
 <template>
   <div class="orderlisting">
-    <table>
-      <thead>
-        <tr>
-          <th v-for="key in columns">
+    <table class="orderlisting__table">
+      <thead class="orderlisting__thead">
+        <tr class="orderlisting__thead--row">
+          <th class="orderlisting__thead--item" v-for="key in columns">
             {{ key }}
             <span class="arrow">
             </span>
@@ -11,13 +11,13 @@
           <th></th>
         </tr>
       </thead>
-      <tbody>
-        <tr v-for="entry in gridData">
-          <td v-for="key in columns">
+      <tbody class="orderlisting__tbody">
+        <tr class="orderlisting__tbody--row" v-for="entry in gridData">
+          <td class="orderlisting__tbody--item" v-for="key in columns">
             {{ entry[key] | isValueSet }}
           </td>
-          <td>
-            <a href="" @click.prevent="removeItem">Remove Item</a>
+          <td class="orderlisting__tbody--item">
+            <a class="orderlisting__tbody--link" href="" @click.prevent="removeItem">Remove Item</a>
           </td>
         </tr>
       </tbody>
@@ -110,23 +110,28 @@ export default {
   margin-right: 17px;
 }
 
-table {
+.orderlisting__table {
   width: 100%;
   height: 100%;
   text-align: left;
   border-spacing: 0;
 }
 
-thead tr {
+.orderlisting__thead--row {
   height: 50px;
+  text-transform: uppercase;
 }
 
-tbody tr {
+.orderlisting__tbody--row {
   height: 64px;
   box-shadow: 0 -1px 0 0 rgba(#C9C9C9, 0.4);
+
+  &:nth-child(even) {
+    background-color: rgba(#F8F8F8, 0.4);
+  }
 }
 
-th {
+.orderlisting__thead--item {
   color: #626272;
   font-family: Montserrat;
   font-size: 8px;
@@ -135,9 +140,7 @@ th {
   padding-left: 15px;
 }
 
-th tr {}
-
-td {
+.orderlisting__tbody--item {
   color: #8899AA;
   font-family: Montserrat;
   font-size: 11px;
@@ -149,11 +152,7 @@ td {
   }
 }
 
-tbody tr:nth-child(even) {
-  background-color: rgba(#F8F8F8, 0.4);
-}
-
-td a {
+.orderlisting__tbody--link {
   text-decoration: underline;
   color: #626272;
   font-family: Montserrat;

@@ -15,3 +15,5 @@
 + TODO Fix active-nav:after icon appearing above modal when click on "Add Product".
 
 + TODO Add media queries and remove fixed-width CSS properties.
+
++ TODO PreventDefault on nav links.
