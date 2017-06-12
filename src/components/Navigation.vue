@@ -112,10 +112,11 @@ export default {
 .nav__user {
   box-sizing: border-box;
   height: 45px;
-  width: 247px;
+  width: 246px;
   background-color: #FFFFFF;
   text-align: left;
   padding-left: 21px;
+  position: relative;
 }
 
 .nav__user--greeting {
