@@ -5,6 +5,7 @@
       <orderspec></orderspec>
       <addproduct></addproduct>
       <orderlisting></orderlisting>
+      <remarks></remarks>
     </div>
   </div>
 </template>
@@ -14,6 +15,7 @@ import Navigation from './components/Navigation'
 import Orderspec from './components/Orderspec'
 import Addproduct from './components/Addproduct'
 import Orderlisting from './components/Orderlisting'
+import Remarks from './components/Remarks'
 
 export default {
   name: 'app',
@@ -21,7 +23,8 @@ export default {
     Navigation,
     Orderspec,
     Addproduct,
-    Orderlisting
+    Orderlisting,
+    Remarks
   }
 }
 </script>
