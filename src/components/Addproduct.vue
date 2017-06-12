@@ -1,10 +1,12 @@
 <template>
   <div class="addproduct">
-    <img class="addproduct__icon" v-bind:class="{ rotate: isRotated }" src="static/icons/icon_plus.svg">
-    <form class="addproduct__form" @focusin="isRotated = !isRotated" @focusout="isRotated = !isRotated">
-      <input class="addproduct__input" v-model="message" placeholder="Add Products">
-    </form>
-  
+    <div class="overlay" v-show="isRotated"></div>
+    <div class="addproduct__wrapper">
+      <img class="addproduct__icon" v-bind:class="{ rotate: isRotated }" src="static/icons/icon_plus.svg">
+      <form class="addproduct__form" @focusin="addProduct" @focusout="releaseProduct">
+        <input class="addproduct__input" v-model="message" placeholder="Add Products">
+      </form>
+    </div>
   </div>
 </template>
 
@@ -16,6 +18,14 @@ export default {
       message: '',
       isRotated: false
     }
+  },
+  methods: {
+    addProduct: function () {
+      this.isRotated = !this.isRotated
+    },
+    releaseProduct: function () {
+      this.isRotated = !this.isRotated
+    }
   }
 }
 
@@ -24,14 +34,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .addproduct {
+  margin-top: 17px;
+  margin-right: 17px;
+}
+
+.addproduct__wrapper {
   height: 50px;
+  background-color: #FFFFFF;
   width: 100%;
   border: 1px solid #C3C8CD;
-  border-radius: 3px;
-  background-color: #FFFFFF;
-  margin-top: 17px;
+  border-radius: 3px; //
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .addproduct__icon {
@@ -70,20 +85,12 @@ export default {
   }
 }
 
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-
-.slide-fade-enter,
-.slide-fade-leave-to
-/* .slide-fade-leave-active for <2.1.8 */
-
-{
-  transform: translateX(10px);
-  opacity: 0;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0; // background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
 }
 </style>
