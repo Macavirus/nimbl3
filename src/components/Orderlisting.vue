@@ -95,7 +95,7 @@ export default {
       if (!value) return 'Set Price'
       return value
     }
-  },
+  }
 }
 
 </script>
