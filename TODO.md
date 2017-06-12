@@ -2,7 +2,7 @@
 
 + TODO Add "Editable" icon next to Qty entry in order list.
 
-+ TODO Add Remarks to order page.
++ DONE Add Remarks to order page.
 
 + TODO Add *Shipping calculator* to order page.
 
